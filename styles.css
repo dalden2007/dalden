@@ -6,8 +6,7 @@
 }
 
 body{
-    background: white
-
+    background: white;
 }
 
 .navbar {
@@ -23,7 +22,6 @@ body{
     padding: 20px;
     text-align: left;
     font-size: 100%;
-    border-bottom: solid;
 }
 
 .navbar ul {
@@ -48,4 +46,14 @@ body{
 .myname {
     font-weight: normal;
     font-size: 17px;
+}
+
+.decor-mountain {
+    size: cover;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    z-index: -1;
+    object-fit:contain;
+    top: -100px;
 }
