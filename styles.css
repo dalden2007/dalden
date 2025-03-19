@@ -1,0 +1,43 @@
+body{
+    background:rgb(30, 32, 30);
+}
+
+.sticky-box {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%; 
+    background-color: rgb(60, 61, 55);
+    color: white;
+    padding: 15px;
+    /*padding-left: 15px;*/
+    text-align: left;
+    font-family: "IBM Plex Mono";
+    font-weight: bold;
+    font-size: 30px;
+    letter-spacing: 15px;
+
+}
+
+.the-road {
+    color: rgb(236, 223, 204);
+    padding-top: 100px;
+    font-size: 40px;
+    text-align: left;
+    letter-spacing: 5px;
+    line-height: 0.1;
+}
+.the-road-picture {
+    padding-top: 100px;
+}
+.the-road-a {
+    color: rgb(165, 158, 147);
+    padding-top: 0px;
+    font-size: 20px;
+    text-align: left;
+}
+.the-road-p {
+    color: white;
+    font-size: 15px;
+    text-align: left;
+}
