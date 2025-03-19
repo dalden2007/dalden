@@ -1,43 +1,51 @@
-body{
-    background:rgb(30, 32, 30);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "IBM Plex Mono", sans-serif;
 }
 
-.sticky-box {
+body{
+    background: white
+
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: fixed; 
     top: 0;
     left: 0;
     width: 100%; 
-    background-color: rgb(60, 61, 55);
-    color: white;
-    padding: 15px;
-    /*padding-left: 15px;*/
+    backdrop-filter: blur(5px);
+    color: black;
+    padding: 20px;
     text-align: left;
-    font-family: "IBM Plex Mono";
-    font-weight: bold;
-    font-size: 30px;
-    letter-spacing: 15px;
-
+    font-size: 100%;
+    border-bottom: solid;
 }
 
-.the-road {
-    color: rgb(236, 223, 204);
-    padding-top: 100px;
-    font-size: 40px;
-    text-align: left;
-    letter-spacing: 5px;
-    line-height: 0.1;
+.navbar ul {
+    list-style-type: none;
+    display: flex;
 }
-.the-road-picture {
-    padding-top: 100px;
+
+.navbar ul li {
+    margin: 0 10px;
 }
-.the-road-a {
-    color: rgb(165, 158, 147);
-    padding-top: 0px;
-    font-size: 20px;
-    text-align: left;
+
+.navbar ul a {
+    color: black;
+    text-decoration: none;
 }
-.the-road-p {
-    color: white;
-    font-size: 15px;
-    text-align: left;
+
+.hero {
+    padding-top: 200px;
+    text-align: center;
+}
+
+.myname {
+    font-weight: normal;
+    font-size: 17px;
 }
