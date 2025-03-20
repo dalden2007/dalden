@@ -69,8 +69,10 @@ body{
 }
 
 .hero {
-    padding-top: 200px;
-    text-align: center;
+    padding-top: 300px;
+    padding-bottom: 40px;
+    font-size: 30px;
+    padding-left: 20%;
 }
 
 .myname {
@@ -87,9 +89,37 @@ body{
     object-fit:contain;
     width: 100vw;
     height: auto;
-    padding-top: 750px;
+    padding-top: 250px;
 }
 
-.tt {
-    margin-top: 200px;
+.roll-ticker {
+    font-size: 15px;
+    padding-block: 10px;
+    border-block: 1px solid;
+    overflow: hidden;
+    user-select: none;
+
+    --gap: 120px;
+    display: flex;
+    gap: var(--gap);
+}
+
+.roll-ticker ul {
+    list-style: none;
+    flex-shrink: 0;
+    min-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8rem;
+
+    animation: scroll 20s linear infinite;
+}
+
+
+
+@keyframes scroll {
+    to{
+        transform: translateX(calc(-100% - var(--gap)));
+    }
 }
