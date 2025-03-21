@@ -34,6 +34,9 @@ document.addEventListener("DOMContentLoaded", function() {
 whiteZone = 400;
 transitionLength = 500;
 
+document.documentElement.style.setProperty('--bg-color', 'rgb(255, 255, 255)');
+document.documentElement.style.setProperty('--inverse-bg-color', 'rgb(0, 0, 0)');
+
 window.addEventListener('scroll', function() {
     let scrollPosition = window.scrollY; // Get current scroll position
 
