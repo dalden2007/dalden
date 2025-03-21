@@ -16,7 +16,7 @@ body{
 }
 
 .myname {
-    color: black;
+    color: var(--inverse-bg-color);
     text-decoration: none;
     transition: color 0.1s;
 
@@ -29,14 +29,14 @@ body{
     position: absolute;
     content: "";
     inset: 0;
-    background: rgb(19, 19, 19);
+    background: var(--inverse-bg-color);
     scale: 1 0;
     z-index: -1;
     transition: 0.2s;
 }
 
 .myname:hover {
-    color: rgb(216, 255, 248);
+    color: var(--bg-color);
     transform: translateX(5px);
     font-size: 20px;
     font-family: "Doto";
@@ -56,7 +56,7 @@ body{
     left: 0;
     width: 100%; 
     backdrop-filter: blur(5px);
-    color: black;
+    color: var(--inverse-bg-color);
     padding: 20px;
     text-align: left;
     font-size: 100%;
@@ -72,7 +72,7 @@ body{
 }
 
 .navbar ul a {
-    color: black;
+    color: var(--inverse-bg-color);
     text-decoration: none;
 
     z-index: 10;
@@ -83,7 +83,7 @@ body{
 }
 
 .navbar ul a:hover {
-    color: white; 
+    color: var(--bg-color); 
     font-family: "Doto";
     font-weight: bold;
 }
@@ -94,11 +94,11 @@ body{
 
 .navbar ul a:after {
     content: "";
-    color: black; 
+    color: var(--inverse-bg-color); 
     position: absolute;
     inset: 0;
     width: 100%;
-    background: black;
+    background: var(--inverse-bg-color);
     scale: 1 0;
     z-index: -1;
     transition: 0.2s;
@@ -138,6 +138,7 @@ body{
 }
 
 .img-container {
+    z-index: -10;
     width: 100vw;
     height: 100vh;
     overflow: hidden;
@@ -145,8 +146,8 @@ body{
 } 
 
 .decor-mountain {
-    position: absolute;
     z-index: -10;
+    position: absolute;
     width: 100vw;
     min-width: 1920px;
     height: auto;
