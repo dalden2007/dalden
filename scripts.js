@@ -8,7 +8,7 @@ window.addEventListener('scroll', function() {
     image.style.transformOrigin = 'bottom';
 });
 
-window.addEventListener('scroll', function() {
+/* window.addEventListener('scroll', function() {
     const scrollY = window.scrollY;
     const targetScroll = 900; 
 
@@ -17,7 +17,7 @@ window.addEventListener('scroll', function() {
     } else {
         document.body.style.backgroundColor = "white"; 
     }
-});
+}); */
 
 document.addEventListener("DOMContentLoaded", function() {
     const myname = document.querySelector(".myname");

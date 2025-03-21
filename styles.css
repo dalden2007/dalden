@@ -137,16 +137,19 @@ body{
     font-size: 17px;
 }
 
-.decor-mountain {
+.img-container {
+    width: 100vw;
+    height: 100vh;
     overflow: hidden;
+    position: relative;
+} 
+
+.decor-mountain {
     display: flex;
-    object-position: center;
     position: absolute;
     z-index: -10;
-    object-fit:contain;
-    width: 100%;
-    min-width: 1920px;
-    height: auto;
+    width: 100vw;
+    height:auto;
     transform: scaleY(0.5);
     transform-origin: bottom;
     transition: transform 0.1s ease-out;
