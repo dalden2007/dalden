@@ -31,15 +31,16 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-
+whiteZone = 400;
+transitionLength = 500;
 
 window.addEventListener('scroll', function() {
     let scrollPosition = window.scrollY; // Get current scroll position
 
-    if (scrollPosition < 400) {
+    if (scrollPosition < whiteZone) {
         document.documentElement.style.setProperty('--bg-color', 'rgb(255, 255, 255)');
     } else {
-        let scrollPercentage = (scrollPosition - 400) / 500; // 300px range (1000 - 700)
+        let scrollPercentage = (scrollPosition - whiteZone) / transitionLength; // 300px range (1000 - 700)
 
         scrollPercentage = Math.min(Math.max(scrollPercentage, 0), 1);
 
@@ -50,10 +51,10 @@ window.addEventListener('scroll', function() {
         document.documentElement.style.setProperty('--bg-color', `rgb(${red}, ${green}, ${blue})`);
     }
 
-    if (scrollPosition < 400) {
+    if (scrollPosition < whiteZone) {
         document.documentElement.style.setProperty('--inverse-bg-color', 'rgb(0, 0, 0)');
     } else {
-        let scrollPercentage = (scrollPosition - 400) / 500;
+        let scrollPercentage = (scrollPosition - whiteZone) / transitionLength;
         scrollPercentage = Math.min(Math.max(scrollPercentage, 0), 1);
 
         let red = Math.min(scrollPercentage * 255, 255);

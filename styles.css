@@ -47,6 +47,12 @@ body{
     scale: 1.2 1.2;
 }
 
+@media screen and (max-width: 768px) {
+    .myname {
+        display:none;
+    }
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -104,16 +110,41 @@ body{
     transition: 0.2s;
 }
 
+@media screen and (max-width: 768px) {
+    .navbar ul {
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+    }
+}
+
 .hero {
-    padding-top: 300px;
-    padding-bottom: 40px;
+    margin-top: 200px;
+    margin-bottom: 40px;
     font-size: 30px;
     padding-left: 20%;
     position: relative;
 
-    z-index: -1;
+    white-space: nowrap;
+    overflow:hidden;
 
-    animation: fadeIn 1s forwards;
+    z-index: -1;
+    display: inline-block;
+    border-right: 2px solid black;
+    animation:
+    blinking 1s steps(1, end) infinite,
+    typing 5s steps(40, end);
+}
+
+@keyframes blinking {
+    0% {border-color: transparent}
+    50% {border-color: black}
+    100% {border-color: transparent}
+}
+
+@keyframes typing {
+    0% {width: 0}
+    100% {width: 100%}
 }
 
 @media screen and (max-width: 768px) {
@@ -123,21 +154,13 @@ body{
     }
 }
 
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
 .myname {
     font-weight: normal;
     font-size: 17px;
 }
 
 .img-container {
+    padding-top: 100px;
     z-index: -10;
     width: 100vw;
     height: 100vh;
