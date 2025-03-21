@@ -7,6 +7,8 @@
 
 body{
     background: white;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .logo-link {
@@ -136,11 +138,12 @@ body{
 }
 
 .decor-mountain {
-    display: block;
+    overflow: hidden;
+    display: flex;
     object-position: center;
     position: absolute;
     z-index: -10;
-    object-fit:cover;
+    object-fit:contain;
     width: 100%;
     min-width: 1920px;
     height: auto;
