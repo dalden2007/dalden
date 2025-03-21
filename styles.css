@@ -145,11 +145,13 @@ body{
 } 
 
 .decor-mountain {
-    display: flex;
     position: absolute;
     z-index: -10;
     width: 100vw;
-    height:auto;
+    min-width: 1920px;
+    height: auto;
+    object-fit: cover;
+
     transform: scaleY(0.5);
     transform-origin: bottom;
     transition: transform 0.1s ease-out;
