@@ -1,25 +1,35 @@
-window.addEventListener('scroll', function() {
+let viewportWidth = window.innerWidth;
+console.log(viewportWidth);
+
+window.addEventListener("resize", () => {
+    viewportWidth = window.innerWidth;
+    //console.log("New Width:", window.innerWidth);
+  });
+
+whiteZone = 400;
+transitionLength = 500;
+
+document.documentElement.style.setProperty('--bg-color', 'rgb(255, 255, 255)');
+document.documentElement.style.setProperty('--inverse-bg-color', 'rgb(0, 0, 0)');
+
+window.addEventListener('scroll', function() { //mountain decor stretch effect
     const image = document.querySelector('.decor-mountain');
     const scrollPosition = window.scrollY;
 
-    const scaleFactor = 0.5 + scrollPosition / 1500;
+    let scaleFactor = 0.5 + scrollPosition / 1500;
+    
+    if (viewportWidth > 1920) {
+        let widthRatio = viewportWidth / 1920;
+        scaleFactor /= widthRatio;
+    }
+
+    console.log(scaleFactor);
 
     image.style.transform = `scaleY(${scaleFactor})`;
     image.style.transformOrigin = 'bottom';
 });
 
-/* window.addEventListener('scroll', function() {
-    const scrollY = window.scrollY;
-    const targetScroll = 900; 
-
-    if (scrollY >= targetScroll) {
-        document.body.style.backgroundColor = "#111111"; 
-    } else {
-        document.body.style.backgroundColor = "white"; 
-    }
-}); */
-
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function() { //Alden Deniega -> Aldenosaur
     const myname = document.querySelector(".myname");
 
     myname.addEventListener("mouseenter", function() {
@@ -31,14 +41,8 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-whiteZone = 400;
-transitionLength = 500;
-
-document.documentElement.style.setProperty('--bg-color', 'rgb(255, 255, 255)');
-document.documentElement.style.setProperty('--inverse-bg-color', 'rgb(0, 0, 0)');
-
 window.addEventListener('scroll', function() {
-    let scrollPosition = window.scrollY; // Get current scroll position
+    let scrollPosition = window.scrollY; // White to Black NavBar
 
     if (scrollPosition < whiteZone) {
         document.documentElement.style.setProperty('--bg-color', 'rgb(255, 255, 255)');

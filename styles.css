@@ -13,8 +13,8 @@ body{
     background: linear-gradient(
         to bottom,
         white 0px,
-        white 900px,
-        #111111 900px,
+        white 890px,
+        #111111 890px,
         #111111 100%
     );
 }
@@ -194,7 +194,7 @@ body{
     position: absolute;
     width: 100vw;
     min-width: 1920px;
-    height: auto;
+    /*height: auto;*/
     object-fit: cover;
 
     transform: scaleY(0.5);
