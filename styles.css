@@ -234,6 +234,15 @@ body{
     }
 }
 
+.book-reviews {
+    padding-left: 5%;
+}
+
+.book-reviews a {
+    text-decoration: none;
+    color: white;
+}
+
 .dark-text {
     padding-top: 2000px;
 }

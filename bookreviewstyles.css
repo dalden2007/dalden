@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "IBM Plex Mono", sans-serif;
+}
+
+body{
+    background: black;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.logo-link {
+    text-decoration: none;
+}
+
+.myname {
+    color: var(white);
+    text-decoration: none;
+    transition: color 0.1s;
+
+    cursor:pointer;
+    transition: color 0.2s;
+    position: relative;
+}
+
+.myname::after {
+    position: absolute;
+    content: "";
+    inset: 0;
+    background: var(white);
+    scale: 1 0;
+    z-index: -1;
+    transition: 0.2s;
+}
+
+.myname:hover {
+    color: var(black);
+    transform: translateX(5px);
+    font-size: 20px;
+    font-family: "Doto";
+    font-weight: bold;
+}
+
+.myname:hover::after {
+    scale: 1.2 1.2;
+}
+
+@media screen and (max-width: 768px) {
+    .myname {
+        display:none;
+    }
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%; 
+    backdrop-filter: blur(5px);
+    color: var(white);
+    padding: 20px;
+    text-align: left;
+    font-size: 100%;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul a {
+    color: var(white);
+    text-decoration: none;
+
+    z-index: 10;
+
+    cursor:pointer;
+    transition: color 0.2s;
+    position: relative;
+}
+
+.navbar ul a:hover {
+    color: var(black); 
+    font-family: "Doto";
+    font-weight: bold;
+}
+
+.navbar ul a:hover::after {
+    scale: 1.4 1.4;
+}
+
+.navbar ul a:after {
+    content: "";
+    color: var(white); 
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    background: var(white);
+    scale: 1 0;
+    z-index: -1;
+    transition: 0.2s;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar ul {
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+    }
+}
