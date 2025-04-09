@@ -71,3 +71,12 @@ window.addEventListener('scroll', function() {
         document.documentElement.style.setProperty('--inverse-bg-color', `rgb(${red}, ${green}, ${blue})`);
     }
 });
+
+window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    const movePercent = scrollY / window.innerWidth; // optional: normalize it
+    const movebooksX = -movePercent * 25; // makes it go from 0% to -100%
+    
+    const rollbooks = document.getElementById('rollbooks');
+    rollbooks.style.transform = `translateX(${movebooksX}%)`;
+  });

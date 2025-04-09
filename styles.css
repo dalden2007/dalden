@@ -234,15 +234,41 @@ body{
     }
 }
 
-.book-reviews {
-    padding-left: 5%;
-}
-
-.book-reviews a {
-    text-decoration: none;
-    color: white;
-}
-
 .dark-text {
     padding-top: 2000px;
+    font-family: 'Doto';
+}
+
+.roll-books {
+    padding-block: 10px;
+    padding-top: 100px;
+    overflow:visible;
+    user-select: none;
+    display: flex;
+    gap: 1rem;
+
+    z-index: -5;
+}
+
+.roll-books ul {
+    list-style: none;
+    flex-shrink: 0;
+    min-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2%;
+
+    z-index: -5;
+}
+
+.roll-books ul img {
+    height: 150px;
+}
+
+.roll-books h1 {
+    color: white;
+    padding-left: 10%;
+    text-shadow: 0px 0px 5px black;
+    white-space: nowrap;
 }
