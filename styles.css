@@ -272,3 +272,21 @@ body{
     text-shadow: 0px 0px 5px black;
     white-space: nowrap;
 }
+
+.parallelogram {
+    margin-left: 10%;
+    width: 200px;
+	height: 200px;
+	transform: skew(-10deg);
+	background: #111111;
+    flex-shrink: 0;
+}
+
+.parallelogram p {
+    margin-top: 20%;
+    transform: skew(0deg);
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    font-weight: bold;
+}
