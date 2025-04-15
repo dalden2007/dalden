@@ -12,23 +12,6 @@ transitionLength = 500;
 document.documentElement.style.setProperty('--bg-color', 'rgb(255, 255, 255)');
 document.documentElement.style.setProperty('--inverse-bg-color', 'rgb(0, 0, 0)');
 
-window.addEventListener('scroll', function() { //mountain decor stretch effect
-    const image = document.querySelector('.decor-mountain');
-    const scrollPosition = window.scrollY;
-
-    let scaleFactor = 0.5 + scrollPosition / 1500;
-    
-    if (viewportWidth > 1920) {
-        let widthRatio = viewportWidth / 1920;
-        scaleFactor /= widthRatio;
-    }
-
-    console.log(scaleFactor);
-
-    image.style.transform = `scaleY(${scaleFactor})`;
-    image.style.transformOrigin = 'bottom';
-});
-
 document.addEventListener("DOMContentLoaded", function() { //Alden Deniega -> Aldenosaur
     const myname = document.querySelector(".myname");
 
@@ -75,7 +58,7 @@ window.addEventListener('scroll', function() {
 window.addEventListener('scroll', () => {
     const scrollY = window.scrollY;
     const movePercent = scrollY / window.innerWidth; // optional: normalize it
-    const movebooksX = -movePercent * 25 + 13; // makes it go from 0% to -100%
+    const movebooksX = -movePercent * 25 + 10; 
     
     const rollbooks = document.getElementById('rollbooks');
     rollbooks.style.transform = `translateX(${movebooksX}%)`;
