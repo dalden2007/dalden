@@ -6,7 +6,7 @@ window.addEventListener("resize", () => {
     //console.log("New Width:", window.innerWidth);
   });
 
-whiteZone = 400;
+whiteZone = 500;
 transitionLength = 500;
 
 document.documentElement.style.setProperty('--bg-color', 'rgb(255, 255, 255)');
@@ -23,6 +23,16 @@ document.addEventListener("DOMContentLoaded", function() { //Alden Deniega -> Al
         myname.textContent = "Alden Deniega";
     });
 });
+
+window.addEventListener('scroll', () => {
+    const svg = document.querySelector('.mountain svg');
+    const maxStretch = 5; // how much to stretch max (e.g., 1.5 = 150%)
+    const mountainscrollY = window.scrollY;
+    const stretch = 1 + Math.min(mountainscrollY / 700, maxStretch - 1); // cap the stretch
+
+    svg.style.transform = `scaleY(${stretch})`;
+    svg.style.transformOrigin = 'bottom';
+  });
 
 window.addEventListener('scroll', function() {
     let scrollPosition = window.scrollY; // White to Black NavBar

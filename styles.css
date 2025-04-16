@@ -6,7 +6,7 @@
 }
 
 body{
-    background: white;
+    background-color: white;
     max-width: 100%;
     overflow-x: hidden;
 
@@ -16,7 +16,7 @@ body{
         white 950px,
         #111111 950px,
         #111111 100%
-    );
+    ); 
 }
 
 .logo-link {
@@ -184,8 +184,10 @@ body{
     position:relative;
     margin-top: 150px;
     width: 100vw;
-    height: 50vh;
+    height: 500px;
     overflow: hidden;
+
+    z-index: -1;
 }
 
 .mountain svg {
@@ -194,8 +196,11 @@ body{
     object-fit:fill;
     position: absolute;
     bottom: 0;
+    transform-origin: bottom;
 
     z-index: -5;
+    will-change: transform;
+    isolation: isolate;
 }
 
 .img-mask {
@@ -208,6 +213,12 @@ body{
     pointer-events: none;
 
     z-index: -2;
+}
+
+@media screen and (max-width: 768px) {
+    .mountain svg {
+        height: 100px;
+    }
 }
 
 .roll-ticker {
