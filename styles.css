@@ -13,8 +13,8 @@ body{
     background: linear-gradient(
         to bottom,
         white 0px,
-        white 890px,
-        #111111 890px,
+        white 950px,
+        #111111 950px,
         #111111 100%
     );
 }
@@ -181,35 +181,33 @@ body{
 }
 
 .mountain {
-    padding-top: 100px;
-    z-index: -10;
+    position:relative;
+    margin-top: 150px;
     width: 100vw;
-    height: 100vh;
-    overflow: visible;
-    position: relative;
-    line-height: 0;
-} 
+    height: 50vh;
+    overflow: hidden;
+}
 
-.mountain img {
+.mountain svg {
+    width: 100vw;
+    height: 200px;
+    object-fit:fill;
     position: absolute;
     bottom: 0;
-    left: 0;
-    width: 100vw;        /* Full width always */
-    height: 300px;       /* Fixed height – change to what you need */
-    object-fit: fill;    /* Stretch to fit dimensions */
-    display: block;
+
+    z-index: -5;
 }
 
 .img-mask {
-    transform: translateY(-150px);
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 2px; /* or 1px depending on the line size */
+    height: 3px;
     background: #111111;
-    z-index: 1;
     pointer-events: none;
+
+    z-index: -2;
 }
 
 .roll-ticker {
