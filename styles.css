@@ -203,6 +203,12 @@ body{
     isolation: isolate;
 }
 
+@media screen and (max-width: 1920px) {
+    .mountain svg {
+        width: 1920px;
+    }
+}
+
 .img-mask {
     position: absolute;
     bottom: 0;
@@ -267,7 +273,9 @@ body{
     display: flex;
     gap: 1rem;
 
+    position: relative;
     z-index: -5;
+    mask: linear-gradient(90deg, transparent, white 20vw, white 80vw, transparent)
 }
 
 .roll-books ul {
@@ -280,8 +288,6 @@ body{
     gap: 2vw;
 
     z-index: -5;
-
-    mask: linear-gradient(90deg, transparent, white 50vw)
 }
 
 .roll-books ul img {

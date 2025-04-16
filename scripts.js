@@ -6,7 +6,7 @@ window.addEventListener("resize", () => {
     //console.log("New Width:", window.innerWidth);
   });
 
-whiteZone = 500;
+whiteZone = 550;
 transitionLength = 500;
 
 document.documentElement.style.setProperty('--bg-color', 'rgb(255, 255, 255)');
@@ -68,7 +68,7 @@ window.addEventListener('scroll', function() {
 window.addEventListener('scroll', () => {
     const scrollY = window.scrollY;
     const movePercent = scrollY / window.innerWidth; // optional: normalize it
-    const movebooksX = -movePercent * 25 + 10; 
+    const movebooksX = -movePercent * 25 - 5; 
     
     const rollbooks = document.getElementById('rollbooks');
     rollbooks.style.transform = `translateX(${movebooksX}%)`;
