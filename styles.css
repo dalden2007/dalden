@@ -273,9 +273,43 @@ body{
     display: flex;
     gap: 1rem;
 
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+
     position: relative;
     z-index: -5;
     mask: linear-gradient(90deg, transparent, white 20vw, white 80vw, transparent)
+}
+
+.roll-books div {
+    background: rgba(0, 0, 0, 0.4);  /* darker tint */
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.6);
+
+    margin-top: 15px;
+
+    position: absolute;
+    color:white;
+    width: 30%;
+    height: 120px;
+}
+
+.roll-books h1 {
+    text-shadow: 0 0 5px black;
+    font-size: 30px;
+    font-weight:400;
+    margin-top: -30px;
+}
+
+@media screen and (max-width: 1200px) {
+    .roll-books h1 {
+        font-size: 2vw;
+    }
 }
 
 .roll-books ul {

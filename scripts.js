@@ -68,7 +68,7 @@ window.addEventListener('scroll', function() {
 window.addEventListener('scroll', () => {
     const scrollY = window.scrollY;
     const movePercent = scrollY / window.innerWidth; // optional: normalize it
-    const movebooksX = -movePercent * 25 - 5; 
+    const movebooksX = -movePercent * 25 + 10; 
     
     const rollbooks = document.getElementById('rollbooks');
     rollbooks.style.transform = `translateX(${movebooksX}%)`;
