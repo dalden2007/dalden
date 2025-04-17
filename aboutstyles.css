@@ -6,9 +6,12 @@
 }
 
 body{
-    background: black;
+    background-color: white;
     max-width: 100%;
     overflow-x: hidden;
+
+    justify-content: center;
+    align-items: center;
 }
 
 .logo-link {
@@ -16,27 +19,30 @@ body{
 }
 
 .myname {
-    color: var(white);
+    color: black;
     text-decoration: none;
     transition: color 0.1s;
 
     cursor:pointer;
     transition: color 0.2s;
     position: relative;
+
+    font-size: 17px;
+    font-weight: 400;
 }
 
 .myname::after {
     position: absolute;
     content: "";
     inset: 0;
-    background: var(white);
+    background: black;
     scale: 1 0;
     z-index: -1;
     transition: 0.2s;
 }
 
 .myname:hover {
-    color: var(black);
+    color: white;
     transform: translateX(5px);
     font-size: 20px;
     font-family: "Doto";
@@ -62,10 +68,12 @@ body{
     left: 0;
     width: 100%; 
     backdrop-filter: blur(5px);
-    color: var(white);
+    color: black;
     padding: 20px;
     text-align: left;
     font-size: 100%;
+
+    z-index: 10;
 }
 
 .navbar ul {
@@ -78,7 +86,7 @@ body{
 }
 
 .navbar ul a {
-    color: var(white);
+    color: black;
     text-decoration: none;
 
     z-index: 10;
@@ -89,7 +97,7 @@ body{
 }
 
 .navbar ul a:hover {
-    color: var(black); 
+    color: white; 
     font-family: "Doto";
     font-weight: bold;
 }
@@ -100,11 +108,11 @@ body{
 
 .navbar ul a:after {
     content: "";
-    color: var(white); 
+    color: black; 
     position: absolute;
     inset: 0;
     width: 100%;
-    background: var(white);
+    background: black;
     scale: 1 0;
     z-index: -1;
     transition: 0.2s;
@@ -117,3 +125,73 @@ body{
             width: 100%;
     }
 }
+
+#balls {
+    padding-top: 5000px;
+}
+
+.seperator {
+    margin-top: 65px;
+    width: 98vw;
+    height: 1px;
+    background-color: black;
+    margin-bottom: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.photo {
+    width: 20vw;       
+    height: 500px;     
+    background-color: #eee; 
+    overflow: hidden; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2vw;
+    margin-right: 20px;
+
+    flex-wrap: wrap;
+    float: left;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.aboutme {
+    font-size: 20px;
+}
+
+.aboutme h1 {
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.aboutme p {
+    margin-bottom: 30px;
+}
+
+@media screen and (max-width: 768px) {
+    .photo {
+      float: none;
+      width: 80vw;
+      height: 50vw;
+      margin: 0 auto 20px auto;
+    }
+  
+    .photo img {
+      height: auto;
+    }
+  
+    .aboutme {
+      width: 100%;
+      padding: 0 20px;
+    }
+  }

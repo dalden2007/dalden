@@ -309,6 +309,7 @@ body{
 }
 
 .booksbutton {
+    text-decoration: none;
     font-weight: 400;
     padding: 10px;
     z-index: 8;
@@ -316,17 +317,28 @@ body{
     color: white;
     border: none;
     cursor: pointer;
+
+    transition: 100ms ease-in-out;
 }
 
 .booksbutton:hover {
     background-color: wheat;
     color: black;
-    transition: 100ms ease-in-out;
+    text-decoration:underline;
 }
 
 @media screen and (max-width: 1200px) {
     .roll-books h1 {
         font-size: 3vw;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .roll-books h1 {
+        font-size: 5vw;
+    }
+    .roll-books div {
+        width: 50%;
     }
 }
 
