@@ -74,6 +74,8 @@ body{
     padding: 20px;
     text-align: left;
     font-size: 100%;
+
+    z-index: 10;
 }
 
 .navbar ul {
@@ -278,8 +280,8 @@ body{
     flex-direction: column;
 
     position: relative;
-    z-index: -5;
-    mask: linear-gradient(90deg, transparent, white 20vw, white 80vw, transparent)
+    z-index: auto;
+    mask: linear-gradient(90deg, transparent, white 20vw, white 80vw, transparent);
 }
 
 .roll-books div {
@@ -293,6 +295,8 @@ body{
     color:white;
     width: 30%;
     height: 120px;
+
+    z-index: 6;
 }
 
 .roll-books h1 {
@@ -301,60 +305,65 @@ body{
     margin-top: -10px;
 }
 
-.see-more {
-    margin: 100px;
-  padding: 15px 40px;
-  border: none;
-  outline: none;
-  color: #FFF;
-  cursor: pointer;
-  position: relative;
-  z-index: 0;
-  border-radius: 12px;
+.booksbutton {
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    color: #black;
+    cursor: pointer;
+    position: absolute;
+    z-index: 8;
+    border-radius: 12px;
 }
 
-.see-more::after {
+.booksbutton::after {
     content: "";
-  z-index: -1;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: #333;
-  left: 0;
-  top: 0;
-  border-radius: 10px;
+    z-index: 8;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #1a1a1a;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
 }
 
-.see-more::before {
+.booksbutton::before {
     content: "";
-  background: linear-gradient(
+    background: linear-gradient(
     45deg,
-    #FF0000, #FF7300, #FFFB00, #48FF00,
-    #00FFD5, #002BFF, #FF00C8, #FF0000
+    #b8a9c9,  
+    #d6c8b4, 
+    #f5d5cb, 
+    #aec6cf,  
+    #c1b398,  
+    #d4a5a5,  
+    #eacda3,   
+    #b8a9c9 
   );
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  background-size: 600%;
-  z-index: -1;
-  width: calc(100% + 4px);
-  height:  calc(100% + 4px);
-  filter: blur(8px);
-  animation: glowing 20s linear infinite;
-  transition: opacity .3s ease-in-out;
-  border-radius: 10px;
-  opacity: 0;
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: 8;
+    width: calc(100% + 4px);
+    height:  calc(100% + 4px);
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+    opacity: 0;
 }
 
-.see-more:hover::before {
+.booksbutton:hover::before {
     opacity: 1;
 }
 
-.see-more:active:after {
+.booksbutton:active:after {
     background: transparent;
 }
 
-.see-more:active {
+.booksbutton:active {
     color: #000;
     font-weight: bold;
 }
