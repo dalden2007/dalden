@@ -31,6 +31,9 @@ body{
     cursor:pointer;
     transition: color 0.2s;
     position: relative;
+
+    font-weight: normal;
+    font-size: 17px;
 }
 
 .myname::after {
@@ -177,11 +180,6 @@ body{
     }
 }
 
-.myname {
-    font-weight: normal;
-    font-size: 17px;
-}
-
 .mountain {
     position:relative;
     margin-top: 150px;
@@ -262,7 +260,7 @@ body{
 }
 
 .dark-text {
-    padding-top: 2000px;
+    padding-top: 50px;
     font-family: 'Doto';
 }
 
@@ -353,7 +351,7 @@ body{
 }
 
 #resume ul li::before {
-    content: "—";
+    content: "▸";
     position: absolute;
     left: 0;
     color: #ffffff;
@@ -374,5 +372,112 @@ body{
 
     #resume h3 {
         font-size: 4vw;
+    }
+}
+
+
+.site-footer {
+    background-color: #111111;
+    color: #f0efe6;
+    padding: 60px 5vw 30px;
+    border-top: 1px solid #555753;
+}
+
+.footer-content {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-col h2 {
+    font-family: 'Doto';
+    color: #7fe06c;
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+}
+
+.footer-col h3 {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+.footer-col p {
+    font-size: 0.9rem;
+    color: #cccaa5;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 8px;
+}
+
+.footer-col a {
+    color: #cccaa5;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.footer-col a:hover {
+    color: #7fe06c;
+}
+
+.footer-bottom {
+    max-width: 900px;
+    margin: 40px auto 0;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 0.75rem;
+    color: #777;
+}
+
+.footer-socials {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-socials li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-socials i {
+    width: 16px;
+    color: #7fe06c;
+    font-size: 1rem;
+}
+
+.footer-socials a {
+    color: #cccaa5;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-socials a:hover {
+    color: #7fe06c;
+}
+
+@media screen and (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
     }
 }
