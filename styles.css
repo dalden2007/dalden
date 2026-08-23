@@ -234,7 +234,7 @@ body{
     overflow: hidden;
     user-select: none;
 
-    --gap: 120px;
+    --gap: 320px;
     display: flex;
     gap: var(--gap);
 }
@@ -377,7 +377,7 @@ body{
 
 
 .site-footer {
-    background-color: #111111;
+    background-color: #161a16;
     color: #f0efe6;
     padding: 60px 5vw 30px;
     border-top: 1px solid #555753;
@@ -477,7 +477,37 @@ body{
 @media screen and (max-width: 768px) {
     .footer-content {
         flex-direction: column;
+        align-items: center;
         text-align: center;
         gap: 30px;
+    }
+
+    .footer-col ul,
+    .footer-socials {
+        align-items: center;
+    }
+
+    .footer-col ul li,
+    .footer-socials li {
+        justify-content: center;
+    }
+}
+
+/* ===== Smooth Scrolling/Contact ===== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+.site-footer.flash {
+    animation: highlight-flash 1.5s ease-out;
+}
+
+@keyframes highlight-flash {
+    0% {
+        background-color: #2a3a28;
+    }
+    100% {
+        background-color: #161a16;
     }
 }

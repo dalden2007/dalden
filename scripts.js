@@ -74,3 +74,16 @@ window.addEventListener('scroll', () => {
     const rollbooks = document.getElementById('rollbooks');
     rollbooks.style.transform = `translateX(${movebooksX}%)`;
   });
+
+
+
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('a[href="#contact"]').forEach(link => {
+        link.addEventListener('click', () => {
+            const footer = document.querySelector('.site-footer');
+            footer.classList.remove('flash');
+            void footer.offsetWidth;
+            footer.classList.add('flash');
+        });
+    });
+});
