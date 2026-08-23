@@ -64,6 +64,25 @@ body{
     }
 }
 
+#scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    z-index: 100;
+    background: transparent;
+}
+
+#scroll-progress-fill {
+    height: 100%;
+    width: 100%;
+    background: #7fe06c;
+    transform: scaleX(0);
+    transform-origin: left;
+    will-change: transform;
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -273,15 +292,6 @@ body{
     color: #f0efe6;
 }
 
-#resume h1 {
-    font-size: 2.2rem;
-    font-weight: 200;
-    margin-bottom: 20px;
-    margin-top: 70px;
-    letter-spacing: 1px;
-    color: #7fe06c;
-}
-
 #resume h2 {
     font-size: 1.1rem;
     font-weight: 600;
@@ -366,16 +376,84 @@ body{
         padding: 0 8vw;
     }
 
-    #resume h1 {
-        font-size: 7vw;
-    }
-
     #resume h3 {
         font-size: 4vw;
     }
 }
 
+/* ===== Title Marquee ===== */
+.section-title-wrap {
+    position: relative;
+    width: 100vw;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    overflow: hidden;
 
+    margin-top: 70px;
+    margin-bottom: 20px;
+}
+
+.resume-education .section-title-wrap {
+    margin-top: 0;
+}
+
+.section-title-wrap .scroll-row {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: flex;
+    align-items: center;
+    width: max-content;
+    gap: 3rem;
+    white-space: nowrap;
+    pointer-events: none;
+    user-select: none;
+    z-index: 0;
+
+    animation: title-scroll 60s linear infinite;
+    will-change: transform;
+}
+
+.section-title-wrap .scroll-row span {
+    flex-shrink: 0;
+    font-family: 'Doto', sans-serif;
+    font-weight: 400;
+    font-size: clamp(4rem, 6vw, 5rem);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #232323;
+}
+
+.section-title-wrap h1 {
+    position: relative;
+    z-index: 1;
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 10px 5vw;
+
+    font-size: 2.2rem;
+    font-weight: 200;
+    letter-spacing: 1px;
+    color: #7fe06c;
+}
+
+@keyframes title-scroll {
+    from { transform: translateY(-50%) translateX(0); }
+    to   { transform: translateY(-50%) translateX(-50%); }
+}
+
+@media screen and (max-width: 768px) {
+    .section-title-wrap .scroll-row {
+        animation-duration: 22s;
+    }
+    .section-title-wrap h1 {
+        font-size: 7vw;
+    }
+}
+
+/* ===== Footer ===== */
 .site-footer {
     background-color: #161a16;
     color: #f0efe6;
@@ -500,7 +578,7 @@ html {
 }
 
 .site-footer.flash {
-    animation: highlight-flash 1.5s ease-out;
+    animation: highlight-flash 0.5s ease-out;
 }
 
 @keyframes highlight-flash {

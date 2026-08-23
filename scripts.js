@@ -65,6 +65,21 @@ window.addEventListener('scroll', function() {
     }
 });
 
+/* ===== Scroll Progress Bar ===== */
+const progressFill = document.getElementById('scroll-progress-fill');
+
+function updateScrollProgress() {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = docHeight > 0 ? scrollTop / docHeight : 0;
+    progressFill.style.transform = `scaleX(${progress})`;
+}
+
+window.addEventListener('scroll', updateScrollProgress, { passive: true });
+window.addEventListener('resize', updateScrollProgress);
+updateScrollProgress();
+
+/* ===== Horizontal Scroll for Rollbooks Section ===== */
 window.addEventListener('scroll', () => {
     const scrollY = window.scrollY;
 
@@ -76,7 +91,7 @@ window.addEventListener('scroll', () => {
   });
 
 
-
+/* ===== Flashing Footer on Contact Link Click ===== */
   document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('a[href="#contact"]').forEach(link => {
         link.addEventListener('click', () => {
@@ -87,3 +102,5 @@ window.addEventListener('scroll', () => {
         });
     });
 });
+
+/* ===== Marquee for Resume Section ===== */

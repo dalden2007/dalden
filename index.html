@@ -9,10 +9,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <script src="scripts.js"></script> 
+    <script src="scripts.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
+
+<div id="scroll-progress">
+    <div id="scroll-progress-fill"></div>
+</div>
 
 <nav class="navbar">
 
@@ -36,19 +40,21 @@
 
 <div class="roll-ticker">
     <ul>
-        <li>01001000</li>
-        <li>01100101</li>
-        <li>01101100</li>
-        <li>01101100</li>
-        <li>01101111</li>
+        <li>pls scroll down</li>
+        <li>hello!</li>
+        <li>welcome</li>
+        <li>look around</li>
+        <li>observe</li>
+        <li>take a gander</li>
     </ul>
 
     <ul aria-hidden="true">
-        <li>01001000</li>
-        <li>01100101</li>
-        <li>01101100</li>
-        <li>01101100</li>
-        <li>01101111</li>
+        <li>pls scroll down</li>
+        <li>hello!</li>
+        <li>welcome</li>
+        <li>look around</li>
+        <li>observe</li>
+        <li>take a gander</li>
     </ul>
 </div>
 
@@ -95,7 +101,14 @@
 <section id="resume">
 
     <div class="resume-education">
-        <h1>Education</h1>
+
+        <div class="section-title-wrap">
+            <div class="scroll-row" aria-hidden="true">
+                <span>Education</span><span>Education</span><span>Education</span><span>Education</span><span>Education</span><span>Education</span>
+                <span>Education</span><span>Education</span><span>Education</span><span>Education</span><span>Education</span><span>Education</span>
+            </div>
+            <h1>Education</h1>
+        </div>
         <p><strong>University of Ottawa</strong> — Ottawa, Ontario</p>
         <p>Bachelor of Applied Science (BASc) in Electrical Engineering, 2025-2029</p>
         <ul>
@@ -105,11 +118,19 @@
     </div>
 
     <div class="resume-projects">
-        <h1>Projects</h1>
+
+        <div class="section-title-wrap">
+            <div class="scroll-row" aria-hidden="true">
+                <span>Projects</span><span>Projects</span><span>Projects</span><span>Projects</span><span>Projects</span><span>Projects</span>
+                <span>Projects</span><span>Projects</span><span>Projects</span><span>Projects</span><span>Projects</span><span>Projects</span>
+            </div>
+            <h1>Projects</h1>
+        </div>
 
         <div class="resume-entry">
-            <h2><strong>uOttawa Design Day: Lead Project Manager, Off-Grid Water Management System — 1st Place Overall</strong></h2>
+            <h2><strong>uOttawa Design Day: Project Lead, Off-Grid Water Management System — Winning Team</strong></h2>
             <ul>
+                <span>Apr 2026</span>
                 <li>Led a team of 5 members, delegating tasks and managing tight deadlines to ensure exceptional completion.</li>
                 <li>Engaged with a client, gathered requirements, providing updates, and incorporating feedback into the system design.</li>
                 <li>Utilized technologies such as 3D printers, laser cutting, and CAD software to build a functional low-cost prototype under the required $100 budget using a BOM.</li>
@@ -120,7 +141,13 @@
 
 
     <div class="resume-experience">
-        <h1>Work Experience</h1>
+        <div class="section-title-wrap">
+            <div class="scroll-row" aria-hidden="true">
+                <span>Work Experience</span><span>Work Experience</span><span>Work Experience</span><span>Work Experience</span>
+                <span>Work Experience</span><span>Work Experience</span><span>Work Experience</span><span>Work Experience</span>
+            </div>
+            <h1>Work Experience</h1>
+        </div>
 
         <div class="resume-entry">
             <h2>Avionics Technician Intern, Flexjet</h2>
@@ -145,7 +172,13 @@
     </div>
 
     <div class="resume-skills">
-        <h1>Things I Know</h1>
+        <div class="section-title-wrap">
+            <div class="scroll-row" aria-hidden="true">
+                <span>Things I Know</span><span>Things I Know</span><span>Things I Know</span><span>Things I Know</span>
+                <span>Things I Know</span><span>Things I Know</span><span>Things I Know</span><span>Things I Know</span>
+            </div>
+            <h1>Things I Know</h1>
+        </div>
         <ul>
             <li>Software/CAD: Altium Designer, Solidworks, LTspice, Quartus II, Fusion 360, and other engineering software.</li>
             <li>Hardware/Tools: 3D Printing, Laser Cutting, FPGA, Microcontrollers, Soldering.</li>
@@ -199,7 +232,7 @@
 </div>
 
     <div class="footer-bottom">
-        <p>&copy; 2026 Built with love, Alden Deniega</p>
+        <p>&copy; 2026 Alden Deniega</p>
     </div>
 </footer>
 
