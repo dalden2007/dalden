@@ -9,6 +9,7 @@ window.addEventListener("resize", () => {
 whiteZone = 550;
 transitionLength = 500;
 
+/* ===== Background Color Transition ===== */
 document.documentElement.style.setProperty('--bg-color', 'rgb(255, 255, 255)');
 document.documentElement.style.setProperty('--inverse-bg-color', 'rgb(0, 0, 0)');
 
@@ -24,6 +25,7 @@ document.addEventListener("DOMContentLoaded", function() { //Alden Deniega -> Al
     });
 });
 
+/* ===== Mountain Stretch on Scroll ===== */
 window.addEventListener('scroll', () => {
     const svg = document.querySelector('.mountain svg');
     const maxStretch = 5; // how much to stretch max (e.g., 1.5 = 150%)
@@ -79,18 +81,6 @@ window.addEventListener('scroll', updateScrollProgress, { passive: true });
 window.addEventListener('resize', updateScrollProgress);
 updateScrollProgress();
 
-/* ===== Horizontal Scroll for Rollbooks Section ===== */
-window.addEventListener('scroll', () => {
-    const scrollY = window.scrollY;
-
-    const movePercent = scrollY / 1000; // optional: normalize it
-    const movebooksX = -movePercent * 25 + 10; 
-    
-    const rollbooks = document.getElementById('rollbooks');
-    rollbooks.style.transform = `translateX(${movebooksX}%)`;
-  });
-
-
 /* ===== Flashing Footer on Contact Link Click ===== */
   document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('a[href="#contact"]').forEach(link => {
@@ -102,5 +92,3 @@ window.addEventListener('scroll', () => {
         });
     });
 });
-
-/* ===== Marquee for Resume Section ===== */

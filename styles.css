@@ -381,7 +381,38 @@ body{
     }
 }
 
-/* ===== Title Marquee ===== */
+                                        /* ===== Projects ===== */
+.project-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Adds space between the date, image, and link */
+    margin-top: 10px;
+}
+
+.project-img {
+    max-width: 80%;
+    align-self: center;
+    height: auto;
+    border-radius: 8px; /* Optional: rounds the image corners */
+    display: block;
+}
+
+.learn-more {
+    font-family: 'IBM Plex Mono', monospace; /* Matches your font imports */
+    font-weight: 600;
+    text-decoration: none;
+    color: #7fe06c; /* Adjust to match your theme's link color */
+    transition: color 0.3s ease;
+    margin-left: 20px;
+}
+
+.learn-more:hover {
+    text-decoration: underline;
+    color: #fafcfa; 
+}
+
+
+                                        /* ===== Title Marquee ===== */
 .section-title-wrap {
     position: relative;
     width: 100vw;
