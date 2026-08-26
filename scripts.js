@@ -92,3 +92,23 @@ updateScrollProgress();
         });
     });
 });
+
+/* ===== Brighten parent entry when .learn-more is hovered/focused ===== */
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.learn-more').forEach(link => {
+        const addHover = () => {
+            const entry = link.closest('.resume-entry') || link.closest('.project-content') || link.parentElement;
+            if (entry) entry.classList.add('hovered');
+        };
+
+        const removeHover = () => {
+            const entry = link.closest('.resume-entry') || link.closest('.project-content') || link.parentElement;
+            if (entry) entry.classList.remove('hovered');
+        };
+
+        link.addEventListener('mouseenter', addHover);
+        link.addEventListener('mouseleave', removeHover);
+        link.addEventListener('focus', addHover);
+        link.addEventListener('blur', removeHover);
+    });
+});

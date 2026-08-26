@@ -411,6 +411,36 @@ body{
     color: #fafcfa; 
 }
 
+/* When a "learn more" link is hovered or focused, slightly brighten the entry
+   by applying a subtle inset overlay. Keeps background dark but makes the
+   entry stand out a bit. */
+.resume-entry,
+.project-content {
+    position: relative;
+}
+
+/* keep inner content above the highlight */
+.resume-entry h2,
+.resume-entry span,
+.resume-entry ul,
+.project-content * {
+    position: relative;
+    z-index: 2;
+}
+
+/* subtle highlight placed slightly outside the content area */
+.resume-entry.hovered::before,
+.project-content.hovered::before {
+    content: "";
+    position: absolute;
+    inset: -20px; /* extends beyond the element by 20px */
+    border-radius: 10px;
+    background: rgba(255,255,255,0.02);
+    pointer-events: none;
+    z-index: 1;
+    transition: opacity 160ms ease, transform 160ms ease;
+}
+
 
                                         /* ===== Title Marquee ===== */
 .section-title-wrap {
