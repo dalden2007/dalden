@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Day Winter 2026 — Alden Deniega</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Tiny5&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles_other.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="project-page">
+
+<nav class="navbar">
+    <a href="index.html" class="logo-link">
+        <h1 class="myname">Alden Deniega</h1>
+    </a>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<section class="project-hero">
+    <a href="index.html" class="back-link">-&gt; back to home</a>
+    <h1>Design Day Winter 2026: Hydroworks, an Off-Grid Water Management System</h1>
+    <p class="project-subtitle">Apr 2026</p>
+</section>
+
+<section class="project-body">
+
+        <div class="project-block">
+        <img src="picturefolder/Proj_DesignDay2026/ddbristolboard.jpg" alt="Presentation Photo" class="project-full-img">
+        <figcaption class="img_caption">Project Presentation Stand</figcaption>
+    </div>
+
+    <div class="project-block">
+        <h2>What is Hydroworks?</h2>
+        <p>
+            Group 13, Hydroworks, developed a non-instrusive, reliable, and plug-and-play solution to a water management system. 
+            Utilizing non-contact liquid level sensors, the project manages to detect and regulate the level inside a water tank without physically manipulating or entering the water tank. We
+            are a team composing of Alden (me), Adam, Donnel, Raeeze, and Juan.
+        </p>
+    </div>
+
+    <div class="project-block">
+        <img src="picturefolder/Proj_DesignDay2026/finalstructure.jpg" alt="Final Structure" class="project-full-img" style="background-color: rgb(122, 148, 130);">
+        <figcaption class="img_caption">Completed Structure of the Hydroworks System</figcaption>
+    </div>
+
+
+    <div class="project-block">
+        <h2>The Problem</h2> <!-- Origin of the project -->
+        <p>
+            Remote, off-grid property owners need a way to automatically prevent their water pumps from running dry because manual monitoring is unreliable, 
+            leads to expensive equipment failures, and creates constant anxiety about their water supply. Specifically with this client, 
+            they are looking for a solution with their water system. Their water system works by pulling water from a lake which is then pumped uphill towards a tote.
+             This tote then can gravity feed into another pump that pressurizes their bladder tank. There is no detection system for when this tote goes empty, so this 
+             means that if the second pump that feeds the bladder tank runs with no water running through it, it can damage itself. 
+        </p>
+    </div>
+
+    <div class="project-block">
+        <img src="picturefolder/Proj_DesignDay2026/pumpdiagram.png" alt="Pump Diagram" class="project-full-img" style="background-color: rgb(122, 148, 130);">
+        <figcaption class="img_caption">Pump Diagram</figcaption>
+    </div>
+
+    <div class="project-block">
+        <h2>The Process</h2>
+        <p>
+            This project was a semester long project, and our professor really hammered down one thing: the design process. This project required us to solve a specific clients problem and
+            even though that sounds simple, it can easily become a confusing mess if you don't have a clear step-by-step plan. We had to go through the design process, 
+            which included defining the problem, researching existing solutions, brainstorming ideas, prototyping, testing, and finally presenting our solution. Throughout the semester, he
+            had us stay on track with the design process, submitting deliverable assignments for each step.
+        </p>
+    </div>
+
+    <div class="project-block">
+        <img src="picturefolder/Proj_DesignDay2026/prototype.jpg" alt="Non-Contact Sensor Prototype" class="project-full-img" style="background-color: rgb(122, 148, 130);">
+        <figcaption class="img_caption">Non-Contact Sensor Prototype, notice the LED indicating that there is water detected even though the sensor is not in contact with the water.</figcaption>
+    </div>
+
+    <div class="project-block">
+        <img src="picturefolder/Proj_DesignDay2026/tests.jpg" alt="Power Consumption Testing" class="project-full-img" style="background-color: rgb(122, 148, 130);">
+        <figcaption class="img_caption">Measuring wattage consumption of the system, useful for optimizing power efficiency.</figcaption>
+    </div>
+
+
+    <div class="project-block">
+        <h2>Electrical Side of Things</h2>
+        <p>
+            The entire system is powered by a DC jack on the side of the box, which will be stepped-down to 5V with a DC-DC buck converter so that the electronics can run. The brains of this
+            system uses an ESP32 microcontroller, which was selected because of its low power consumption, built-in Wi-Fi, and ease of use. The ESP32 is programmed to read the water level from
+            non-contact liquid level sensors, which are mounted on the outside of the water tote, and then send this data to a relay module that controls the water pump. The ESP32 is also programmed
+            to send notifications to the user via email when the water level is low and filled up so the user can have comfort in knowing the status of their water system. Some LEDs are also
+            installed to indicate the current status, such as when the water level is below threshold, when water level is above threshold, and when the water pump is running.
+        </p>
+    </div>
+    
+    <div class="project-block">
+        <img src="picturefolder/Proj_DesignDay2026/ddschematic.png" alt="Schematic" class="project-full-img">
+        <figcaption class="img_caption">System Schematic, using KiCad</figcaption>
+    </div>
+
+    <div class="project-block">
+        <h2>The Great Pitch</h2>
+        <p>
+            This project that we had been working on throughout the semester was presented at the University of Ottawa's Design Day Winter 2026, where we pitched our project to a
+            panel of judges. We only had 5 minutes to present our product, so we had to make sure we conveyed the problem, showed our solution, and WHY US! Us 5 managed to plan out the pitch
+            by splitting up the presentation into 5 parts, where each of us had a specific aspect we were strong at to present. We managed to win the competition, and we were awarded a cash prize
+            of $125 for our efforts. This was a great experience for me, as I got to work with a team of 5 people, and we all had to work together to make sure we were able to present our project 
+            in the best way possible.
+        </p>
+    </div>
+
+    <div class="project-block">
+        <img src="picturefolder/Proj_DesignDay2026/ddwin.jpeg" alt="Winning Photo" class="project-full-img">
+        <figcaption class="img_caption">Our winning photo</figcaption>
+    </div>
+
+
+    <div class="project-block">
+        <h2>Tools &amp; Tech</h2>
+        <ul>
+            <li>OnShape for 3D CAD, alongside 3D printing</li>
+            <li>ESP32 programming (C), with Arduino IDE </li>
+            <li>Power consumption analysis (multimeters and DC power supplies)</li>
+            <li>Soldering &amp; hand assembly</li>
+        </ul>
+    </div>
+
+    <a href="index.html" class="back-link bottom-back">-&gt; back to home</a>
+
+</section>
+
+
+<footer class="site-footer" id="contact">
+    <div class="footer-content">
+        <div class="footer-col">
+            <h2>Alden Deniega</h2>
+            <p>Heya!</p>
+        </div>
+
+        <div class="footer-col">
+            <h3>Contact</h3>
+            <ul>
+                <li><i class="fa-solid fa-envelope"></i> <a href="mailto:a.jan152007@outlook.com">a.jan152007@outlook.com</a></li>
+                <li><i class="fa-solid fa-phone"></i> <a href="tel:+7057416980">+1 (705)-741-6980</a></li>
+                <li><i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/alden-deniega-b39094365" target="_blank">LinkedIn</a></li>
+                <li><i class="fa-brands fa-github"></i> <a href="https://github.com/dalden2007" target="_blank">GitHub</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3>Elsewhere</h3>
+            <ul class="footer-socials">
+                <li><i class="fa-brands fa-instagram"></i> <a href="https://www.instagram.com/aldenosaur/" target="_blank">@aldenosaur</a></li>
+                <li><i class="fa-brands fa-tiktok"></i> <a href="https://www.tiktok.com/@aldenosaur" target="_blank">@aldenosaur</a></li>
+                <li><i class="fa-brands fa-x-twitter"></i> <a href="https://x.com/aldenosaur" target="_blank">@aldenosaur</a></li>
+                <li><i class="fa-brands fa-youtube"></i> <a href="https://www.youtube.com/@aldenosaur4456" target="_blank">@aldenosaur4456</a></li>
+                <li><i class="fa-brands fa-spotify"></i> <a href="https://open.spotify.com/artist/3TujdIjdlVTRUfFEEU4HA0?si=MqBOPU9yR1q4uUTNWPRAZw" target="_blank">Aldenosaur</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 Alden Deniega</p>
+    </div>
+</footer>
+
+</body>
+</html>
