@@ -31,6 +31,21 @@ body.project-page {
     color: #fafcfa;
 }
 
+.content-link {
+    display: inline-block;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 600;
+    text-decoration: none;
+    color: #7fe06c;
+    margin-bottom: 40px;
+    transition: color 0.3s ease;
+}
+
+.content-link:hover {
+    text-decoration: underline;
+    color: #fafcfa;
+}
+
 .project-hero h1 {
     font-weight: 400;
     font-size: 2.4rem;
