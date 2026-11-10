@@ -280,7 +280,7 @@ body{
     height: 200px;
     object-fit:fill;
     position: absolute;
-    bottom: 0;
+    bottom: 0px;
     transform-origin: bottom;
 
     z-index: -5;
@@ -310,32 +310,6 @@ body{
     .mountain svg {
         height: 100px;
     }
-}
-
-.roll-ticker {
-    font-size: 15px;
-    padding-block: 10px;
-    border-block: 1px solid;
-    overflow: hidden;
-    user-select: none;
-
-    --gap: 320px;
-    display: flex;
-    gap: var(--gap);
-}
-
-.roll-ticker ul {
-    list-style: none;
-    flex-shrink: 0;
-    min-width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 8rem;
-
-    z-index: -1;
-
-    animation: scroll 20s linear infinite;
 }
 
 @keyframes scroll {
