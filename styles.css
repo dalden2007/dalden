@@ -73,7 +73,7 @@ body{
     width: auto;
     object-fit: cover;         /* crops slightly if the max-width kicks in */
     z-index: 5;
-    border-radius: 3px;
+    border-radius: 5px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
     pointer-events: none;
 
@@ -102,11 +102,11 @@ body{
         }
     }
 
-@media screen and (max-width: 1150px) {
+@media screen and (max-width: 1200px) {
     .ticker-photo {
         top: 0;
         left: 50%;
-        margin-top: 100px;
+        margin-top: 30px;
         height: 320px;
         max-width: 85vw;
         transform: translateX(-50%) rotate(3deg);
@@ -269,7 +269,7 @@ body{
     position:relative;
     margin-top: 150px;
     width: 100vw;
-    height: 550px;
+    height: 600px;
     overflow: hidden;
 
     z-index: -1;
