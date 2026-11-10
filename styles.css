@@ -716,3 +716,8 @@ html {
         background-color: #161a16;
     }
 }
+
+.page-wrap {
+    overflow-x: hidden;
+    width: 100%;
+}
