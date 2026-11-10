@@ -58,9 +58,60 @@ body{
     scale: 1.2 1.2;
 }
 
+.ticker-wrap {
+    position: relative;
+}
+
+.ticker-photo {
+    position: absolute;
+    top: 100%;
+    left: 60%;
+    transform: translateY(-50%) rotate(3deg);
+    height: clamp(100px, 150vw, 320px);
+    width: auto;
+    z-index: 5;
+    border-radius: 3px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    pointer-events: none;
+
+    animation: photo-drop 0.5s ease-out 0.3s both;
+}
+
+@keyframes photo-drop {
+    from {
+        opacity: 0;
+        transform: translateY(calc(-50% - 120px)) rotate(0deg);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(-50%) rotate(3deg);
+    }
+}
+
 @media screen and (max-width: 768px) {
     .myname {
         display:none;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .ticker-photo {
+        top: 0%;                       /* starts at the bottom edge of the ticker */
+        left: 50%;
+        margin-top: 100px;                /* gap between ticker and photo */
+        transform: translateX(-50%) rotate(3deg);
+        animation-name: photo-drop-mobile;
+    }
+
+    @keyframes photo-drop-mobile {
+        from {
+            opacity: 0;
+            transform: translateX(-50%) translateY(-120px) rotate(0deg);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0) rotate(3deg);
+        }
     }
 }
 
