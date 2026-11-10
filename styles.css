@@ -60,6 +60,7 @@ body{
 
 .ticker-wrap {
     position: relative;
+    overflow-x: clip;
 }
 
 .ticker-photo {
@@ -67,8 +68,10 @@ body{
     top: 100%;
     left: 60%;
     transform: translateY(-50%) rotate(3deg);
-    height: clamp(100px, 150vw, 320px);
+    height: clamp(200px, 28vw, 320px);
+    max-width: 36vw;           /* 58% + 36vw = 94vw, so it never reaches the right edge */
     width: auto;
+    object-fit: cover;         /* crops slightly if the max-width kicks in */
     z-index: 5;
     border-radius: 3px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
@@ -88,22 +91,7 @@ body{
     }
 }
 
-@media screen and (max-width: 768px) {
-    .myname {
-        display:none;
-    }
-}
-
-@media screen and (max-width: 1150px) {
-    .ticker-photo {
-        top: 0%;                       /* starts at the bottom edge of the ticker */
-        left: 50%;
-        margin-top: 100px;                /* gap between ticker and photo */
-        transform: translateX(-50%) rotate(3deg);
-        animation-name: photo-drop-mobile;
-    }
-
-    @keyframes photo-drop-mobile {
+@keyframes photo-drop-mobile {
         from {
             opacity: 0;
             transform: translateX(-50%) translateY(-120px) rotate(0deg);
@@ -112,6 +100,33 @@ body{
             opacity: 1;
             transform: translateX(-50%) translateY(0) rotate(3deg);
         }
+    }
+
+@media screen and (max-width: 1150px) {
+    .ticker-photo {
+        top: 0;
+        left: 50%;
+        margin-top: 100px;
+        height: 320px;
+        max-width: 85vw;
+        transform: translateX(-50%) rotate(3deg);
+        animation-name: photo-drop-mobile;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .myname {
+        display:none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .ticker-photo {
+        width: 108vw;          /* wider than the screen so the tilted edges bleed off */
+        max-width: none;
+        height: auto;
+        border-radius: 0;
     }
 }
 
