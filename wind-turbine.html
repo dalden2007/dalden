@@ -114,31 +114,55 @@
     <div class="project-block">
         <h2>Testing &amp; Results</h2>
         <p>
-            Tests were done with a fan to simulate wind, and RPM was measured manually through a
-            app where I tapped the screen every time the turbine completed a complete rotation.
-        </p>
-    </div>
+            Tests were done with a fan to simulate wind, and RPM calculated manually from calculating the number of seconds
+            it took for each full rotation in a minute. At around 200RPM, the NEMA 17 stepper motor paired with dual
+            1N4007 full-bridge rectifiers produced an output of 2.2V DC. While the mechanical turbine spin smoothly and
+            captured the wind well, 2.2V is not sufficient to activate the TP4056 charging module, which requires a 
+            minumum of 5V input.
+        </p> <br
 
     <div class="project-block">
         <img src="picturefolder/wind_turbine/vawttests.jpg" alt="Testing setup" class="project-full-img" style="background-color: rgb(122, 148, 130);">
         <figcaption class="img_caption">Testing setup</figcaption>
     </div>
 
+    <div class="project-block">
+        <img src="picturefolder/wind_turbine/data.png" alt="Voltage Graphed" class="project-full-img" style="background-color: rgb(122, 148, 130);">
+        <figcaption class="img_caption">Generated Voltage vs. RPM</figcaption>
+    </div>
+
+        <p>
+            It was hard to set the wind turbine at specific RPMs since the fan only had 4 settings, so there were only 4 sample points which
+            a linear regression was used. At the lower speeds, the voltage was so low it was basically 0.
+        </p> <br><br>
+
+    </div>
 
     <div class="project-block">
         <h2>Improvements &amp; Lessons Learned</h2>
         <p>
-            The turbine was able to generate a maximum of 2V at 200RPM, which is not enough to activate the TP4056 charging module. 
+            The standard 1N4007 silicon diodes introduced a fixed voltage drop of ~1.5V across the bridge circuit.
+            Although manual screen-tapping for RPM measurement is a good baseline, an automatic optical or magnetic tachometer
+            would yield cleaner data. For the next steps, switching to diodes with lower forward voltage drops like a
+            Schottky 1N5817 could cut bridge losses and recover up to 0.8V. Squeezing out more voltage from the generator
+            is going to be a challenge, but I could also consider utilizing ultra-low-voltage start boost converters that are
+            capable of initiating boost conversion from input voltages as low as 0.4V. <br><br>
+            Overall, this project was a great learning experience in mechanical design, electrical engineering, and problem-solving.
+             I learned a lot about the challenges of small-scale wind energy generation and the importance of optimizing every component in the system.
         </p>
     </div>
 
+
+    <div class="project-block">
+        <img src="picturefolder/wind_turbine/turbinefinished.jpeg" alt="Finished turbine" class="project-full-img" style="background-color: rgb(122, 148, 130);">
+        <figcaption class="img_caption">Finished turbine</figcaption>
+    </div>
 
 
     <div class="project-block">
         <h2>Tools &amp; Tech</h2>
         <ul>
-            <li>Solidworks for 3D modeling</li>
-            <li>LTspice for electrical generation simulation</li>
+            <li>Solidworks for 3D modeling/planning</li>
             <li>Power production analysis (multimeters and DC power supplies)</li>
             <li>Soldering &amp; hand assembly</li>
         </ul>
